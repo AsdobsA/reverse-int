@@ -1,13 +1,7 @@
 module.exports = function reverse (n) {
-  let result = 0;
-    if (n < 0) {
-        n=n*(-1);
+    if (n > 0) {
+        return n.toString().split('').reverse().join('')
+    } else {
+        return n.toString().slice(1).split('').reverse().join('')
     }
-    while(n){             
-        result = result * 10 + n%10;
-        n = Math.floor(n/10);                     
-    }  
-    return result;
 }
-
-
